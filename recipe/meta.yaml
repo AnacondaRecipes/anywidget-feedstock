@@ -38,7 +38,7 @@ test:
     - pip
 
 about:
-  home: https://pypi.org/project/anywidget/
+  home: https://github.com/manzt/anywidget
   summary: simple, custom Jupyter widgets
   description: |
     anywidget is a new Python library that greatly simplifies creating and publishing
@@ -49,7 +49,7 @@ about:
   license_file: LICENSE
   license_family: MIT
   dev_url: https://github.com/manzt/anywidget
-  doc_url: https://anywidget.readthedocs.io
+  doc_url: https://github.com/manzt/anywidget/blob/main/docs/README.md
 extra:
   recipe-maintainers:
     - manzt
