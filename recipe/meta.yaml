@@ -12,7 +12,7 @@ source:
 build:
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir -vv
   number: 0
-  skip: true  #[py<38 or s390x]
+  skip: true  # [py<310]
 
 requirements:
   host:
@@ -27,7 +27,7 @@ requirements:
     - typing_extensions >=4.2.0
     - psygnal >=0.8.1
   run_constraints:
-    - watchfiles >=0.18.0
+    - watchfiles >=1.1.0
 
 test:
   imports:
