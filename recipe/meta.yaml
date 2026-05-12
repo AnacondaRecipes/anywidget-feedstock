@@ -1,5 +1,5 @@
 {% set name = "anywidget" %}
-{% set version = "0.9.18" %}
+{% set version = "0.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/anywidget-{{ version }}.tar.gz
-  sha256: 262cf459b517a7d044d6fbc84b953e9c83f026790b2dd3ce90f21a7f8eded00f
+  sha256: 6695fbef9449cf8c27f421b96c5837aa37f909ec1f60cfa33add333e1b70b169
 
 build:
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir -vv
   number: 0
-  skip: true  #[py<38 or s390x]
+  skip: true  # [py<310]
 
 requirements:
   host:
@@ -27,7 +27,7 @@ requirements:
     - typing_extensions >=4.2.0
     - psygnal >=0.8.1
   run_constraints:
-    - watchfiles >=0.18.0
+    - watchfiles >=1.1.0
 
 test:
   imports:
